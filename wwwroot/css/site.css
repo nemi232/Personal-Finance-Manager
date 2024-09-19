@@ -1,0 +1,328 @@
+/* Hero Container Styling */
+.hero-container {
+  text-align: center;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif; /* Changed font to Roboto */
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-large {
+  padding: 20px 40px;  /* Increased size */
+  font-size: 1.4rem;   /* Slightly bigger font */
+  font-weight: bold;   /* Bolder text */
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);  /* Increased scaling */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button click effect */
+.btn:active {
+  transform: scale(0.95); /* Shrink slightly when clicked */
+  transition: transform 0.1s;
+}
+
+/* Info Container Styling */
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.info-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.info-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.info-text {
+  font-size: 1rem;
+  color: #666;
+  font-family: 'Roboto', sans-serif;  /* Changed font to Roboto */
+  line-height: 1.6;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* Summary Page Styling */
+.summary-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.summary-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.summary-table th, .summary-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.summary-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.income-row {
+  background-color: #e0f7fa;
+}
+
+.expense-row {
+  background-color: #ffebee;
+}
+
+/* Cards for total values */
+.totals-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.totals-card {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  width: 30%;
+}
+
+.income-card {
+  background-color: #28a745; /* Green for income */
+}
+
+.expense-card {
+  background-color: #dc3545; /* Red for expenses */
+}
+
+.balance-card {
+  background-color: #ffc107; /* Yellow for balance */
+}
+
+.totals-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.totals-card p {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn {
+    margin: 5px;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .totals-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .totals-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Form Container Styling for Add Income/Expense */
+  .form-container {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .form-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+  }
+
+  .form-group input:focus, .form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  }
+
+  .form-group select {
+    appearance: none; /* Removes default dropdown arrow */
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23007bff"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center/12px 12px;
+  }
+
+  .button-container {
+    text-align: center;
+  }
+
+  .button-container .btn {
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    margin: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .button-container .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .button-container .btn-secondary {
+    background-color: #6c757d;
+  }
+
+  .button-container .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+
+  /* Category Dropdown Styling */
+  .form-group .category-dropdown {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-group .category-dropdown select {
+    width: 48%; /* Makes dropdown fit neatly within form */
+  }
+
+  /* Responsive Design for Form */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 20px;
+    }
+
+    .form-title {
+      font-size: 1.5rem;
+    }
+
+    .form-group input, .form-group select {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    .button-container .btn {
+      padding: 10px 30px;
+      font-size: 1rem;
+    }
+  }
+}

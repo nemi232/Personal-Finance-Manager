@@ -1,0 +1,26 @@
+@page
+@model PersonalFinanceBoss.Pages.MonthlyReportModel
+
+<h2>Monthly Report</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Month</th>
+        <th>Total Income</th>
+        <th>Total Expenses</th>
+        <th>Savings</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var report in Model.MonthlyReports)
+    {
+    <tr>
+        <td>@report.Month</td>
+        <td>@report.TotalIncome</td>
+        <td>@report.TotalExpenses</td>
+        <td>@report.Savings</td>
+    </tr>
+    }
+    </tbody>
+</table>

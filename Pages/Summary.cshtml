@@ -1,0 +1,50 @@
+@page
+@model PersonalFinanceBoss.Pages.SummaryModel
+@{
+ViewData["Title"] = "Summary";
+}
+
+<div class="summary-container">
+    <h2 class="summary-title">Financial Summary</h2>
+
+    <table class="summary-table">
+        <thead>
+        <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Type</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var transaction in Model.Transactions)
+        {
+        <tr class="@(transaction.IsIncome ? "income-row" : "expense-row")">
+            <td>@transaction.Description</td>
+            <td>@transaction.Amount.ToString("C")</td>
+            <td>@transaction.Category</td>
+            <td>@(transaction.IsIncome ? "Income" : "Expense")</td>
+            <td>@transaction.Date.ToString("d")</td>
+        </tr>
+        }
+        </tbody>
+    </table>
+
+    <div class="totals-container">
+        <div class="totals-card income-card">
+            <h3>Total Income</h3>
+            <p>@Model.TotalIncome.ToString("C")</p>
+        </div>
+        <div class="totals-card expense-card">
+            <h3>Total Expenses</h3>
+            <p>@Model.TotalExpense.ToString("C")</p>
+        </div>
+        <div class="totals-card balance-card">
+            <h3>Balance</h3>
+            <p>@Model.Balance.ToString("C")</p>
+        </div>
+    </div>
+
+    <a asp-page="/Index" class="btn btn-primary btn-large">Back to Dashboard</a>
+</div>
