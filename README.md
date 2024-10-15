@@ -1,6 +1,6 @@
-# PersonalFinanceBoss
+# Personal Finance Manager
 
-PersonalFinanceBoss is a personal finance management application built using C# and ASP.NET Core. It allows users to manage their income and expenses, generate financial summaries, and visualize their financial data.
+ A personal finance management application built using C# and ASP.NET Core. It allows users to manage their income and expenses, generate financial summaries, and visualize their financial data.
 
 ## Features
 
